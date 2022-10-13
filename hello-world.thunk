@@ -1,0 +1,5 @@
+(def hello-world
+  (from (linux/alpine)
+    ($ echo "Hello, world!")))
+
+[ (run hello-world) (next (read hello-world :raw)) (succeeds? hello-world)]
